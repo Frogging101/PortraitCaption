@@ -1,4 +1,6 @@
 <!--
+    Copyright (C) 2013 OHRI 
+
     This file is part of PortraitCaption.
 
     PortraitCaption is free software: you can redistribute it and/or modify
@@ -17,6 +19,13 @@
 <html>
 <head>
     <title>PortraitCaption</title>
+    <style type="text/css">
+    span.bottomtext{
+        font-size:0.7em;
+        text-align:center;
+        display:block;
+    }
+    </style>
 </head>
 <body>
 <h1>PortraitCaption Web Interface</h1>
@@ -29,6 +38,14 @@ This application will create an image that looks like this:<br><br>
 <br>
 <input type="submit" name="pdf" value="Generate PDF">
 <input type="submit" name="png" value="Generate PNG">
+<br>
+<b>Warning: Colors may not display correctly in Adobe Reader.</b>
+<br><br>
+
+<span class="bottomtext"><a href="https://github.com/Frogging101/PortraitCaption">PortraitCaption on GitHub</a><br>
+&#169; 2013 OHRI | Created by John Brooks<br><br>
+
+<a href=http://www.gnu.org/licenses/gpl.html><img src="gplv3-88x31.png" alt="Licensed under GPLv3"></a>
 </form>
 </body>
 </html>
