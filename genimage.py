@@ -24,6 +24,7 @@ import math
 from sys import argv
 
 fileExt = ""
+compression = "none"
 
 if len(argv) < 4 or len(argv) > 5:
     print "Usage: genimage <source filename> \"<name>\" \"<title>\" [--pdf|--png]"
@@ -32,6 +33,7 @@ if len(argv) < 4 or len(argv) > 5:
 if len(argv) == 5:
     if argv[4] == "--pdf":
         fileExt = ".pdf"
+        compression = "zip"
     elif argv[4] == "--png":
         fileExt = ".png"
     else:
@@ -88,7 +90,7 @@ titleOffset = nameOffset+10+((-(80.0-nameSize)/80.0)*100.0)
 
 print titleOffset
 
-os.system("convert "+argv[1]+" -resize "+str(idealInputWidth)+"x"+str(idealInputHeight)+" -background '#1531b4' \
+os.system("convert "+argv[1]+" -compress "+compression+" -resize "+str(idealInputWidth)+"x"+str(idealInputHeight)+" -background '#1531b4' \
 -bordercolor '#1531b4' -gravity northeast -splice "+str(math.ceil(widthDifference/2.0))+"x0 \
 -gravity southwest -splice "+str(widthDifference/2)+"x0 -gravity north -border 225x225 -font Helvetica \
 -pointsize "+str(nameSize)+" -splice 0x"+str(math.ceil(heightDifference/2.0))+" \
