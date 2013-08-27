@@ -7,7 +7,7 @@ Requirements:
 *Python 2.7 or later
 *PHP (Web interface only)
 
-Included are genimage.py, web interface files, and 4 sample images for both PNG and PDF, with different input sizes and text lengths.
+Included in the release package are genimage.py, web interface files, and 4 sample images for both PNG and PDF, with different input sizes and text lengths.
 
 The script can be called directly from the command line, or through the web interface. To set up the web interface, simply drop all of the files in the "src" directory into the root of your web server. PHP is required.
 
