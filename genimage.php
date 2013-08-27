@@ -16,8 +16,8 @@
     along with PortraitCaption.  If not, see <http://www.gnu.org/licenses/>.
 */
 
-$name = escapeshellcmd($_POST["name"]);
-$title = escapeshellcmd($_POST["title"]);
+$name = $_POST["name"];
+$title = $_POST["title"];
 $error = False;
 
 if(isset($_POST["pdf"]))
@@ -53,14 +53,13 @@ if($title == null){
 if($error == False){
     $wd = getcwd();
     chdir("/tmp");
-    echo "python ".$wd."/genimage.py \"".$_FILES['image']['tmp_name']."\" \"".$name."\" \"".$title."\" ".$filearg;
     exec("python ".$wd."/genimage.py \"".$_FILES['image']['tmp_name']."\" \"".$name."\" \"".$title."\" ".$filearg);
     chdir($wd);
     $fi = finfo_open(FILEINFO_MIME_TYPE);
     $mime = finfo_file($fi,"/tmp/".$outfilename);
     header('Content-Type: '.$mime);
-    header("Content-Type: application/force-download");
-    header('Content-Disposition: attachment; filename='.$outfilename);
+    header("Content-Type: application/octet-stream");
+    header("Content-Disposition: attachment; filename=\"".$outfilename."\"");
     readfile("/tmp/".$outfilename);
 }
 

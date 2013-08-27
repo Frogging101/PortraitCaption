@@ -69,11 +69,11 @@ nameOffset = int(round(((80.0-nameSize)/80.0)*100.0+20.0))
 titleOffset = nameOffset+10+((-(80.0-nameSize)/80.0)*100.0)
 
 print titleOffset
- 
+
 os.system("convert "+argv[1]+" -resize "+str(idealInputWidth)+"x"+str(idealInputHeight)+" -background '#1531b4' \
 -bordercolor '#1531b4' -gravity northeast -splice "+str(math.ceil(widthDifference/2.0))+"x0 \
 -gravity southwest -splice "+str(widthDifference/2)+"x0 -gravity north -border 225x225 -font Helvetica \
 -pointsize "+str(nameSize)+" -splice 0x"+str(math.ceil(heightDifference/2.0))+" \
 -fill white -shave 200x0 -chop 0x200 -gravity southwest -splice 0x"+str(heightDifference/2)+" \
 -annotate +25+"+str(nameOffset)+"% \""+name+"\\n\" -pointsize "+str(titleSize)+" \
--annotate +25+"+str(titleOffset)+"% \""+title+"\" -units PixelsPerCentimeter -density 125.74 "+argv[2].replace(" ", "")+fileExt)
+-annotate +25+"+str(titleOffset)+"% \""+title+"\" -units PixelsPerCentimeter -density 125.74 \""+argv[2].replace(" ", "")+fileExt+"\"")
