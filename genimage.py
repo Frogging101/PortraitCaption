@@ -14,7 +14,7 @@ if len(argv) < 4 or len(argv) > 5:
 if len(argv) == 5:
     if argv[4] == "--pdf":
         fileExt = ".pdf"
-    if argv[4] == "--png":
+    elif argv[4] == "--png":
         fileExt = ".png"
     else:
         print "Usage: genimage <source filename> \"<name>\" \"<title>\" [--pdf|--png]"
