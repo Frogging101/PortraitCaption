@@ -25,12 +25,17 @@
         text-align:center;
         display:block;
     }
+    .exampleimg{
+        height:50%;
+        width:auto;
+        display: block;
+    }
     </style>
 </head>
 <body>
 <h1>PortraitCaption Web Interface</h1>
 This application will create an image that looks like this:<br><br>
-<img src="JohnBrooks.png" width=25%><br><br><br>
+<img src="images/JohnBrooks.png" class="exampleimg"><br><br>
 <form action="genimage.php" enctype="multipart/form-data" method="post">
 <b>Image: </b><input type="file" name="image"><br><br>
 <b>Name: </b><input type="text" name="name" value="John Brooks"><br><br>
@@ -45,7 +50,7 @@ This application will create an image that looks like this:<br><br>
 <span class="bottomtext"><a href="https://github.com/Frogging101/PortraitCaption">PortraitCaption on GitHub</a><br>
 &#169; 2013 OHRI | Created by John Brooks<br><br>
 
-<a href=http://www.gnu.org/licenses/gpl.html><img src="gplv3-88x31.png" alt="Licensed under GPLv3"></a>
+<a href=http://www.gnu.org/licenses/gpl.html><img src="images/gplv3-88x31.png" alt="Licensed under GPLv3"></a>
 </form>
 </body>
 </html>

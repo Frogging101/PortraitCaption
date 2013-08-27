@@ -1,11 +1,14 @@
-This software is distributed under the GPLv3 license. Please see COPYING.txt for more information.
+This software is distributed under the GPLv3 license. Please see COPYING.txt for more information. Do not redistribute PortraitCaption without including COPYING.txt.
 
 Documentation: https://docs.google.com/document/d/1BNp0uTb-CLZir-9CsFyLCrG6Iv7mZ9Jkd8IihhbvPmY/edit
 
 Requirements:
 *ImageMagick with FreeType
 *Python 2.7 or later
+*PHP (Web interface only)
 
-Included are genimage.py, web interface files, and 4 sample images with different input sizes and text lengths.
+Included are genimage.py, web interface files, and 4 sample images for both PNG and PDF, with different input sizes and text lengths.
 
 The script can be called directly from the command line, or through the web interface. To set up the web interface, simply drop all of the files in the "src" directory into the root of your web server. PHP is required.
+
+To use the script on its own (without the web interface), all you need is genimage.py; all other files in the src directory can be safely discarded.

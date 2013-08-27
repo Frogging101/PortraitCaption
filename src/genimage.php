@@ -54,7 +54,7 @@ if($title == null){
 if($error == False){
     $wd = getcwd();
     chdir("/tmp");
-    exec("python ".$wd."/genimage.py \"".$_FILES['image']['tmp_name']."\" \"".$name."\" \"".$title."\" ".$filearg);
+    exec("python ".$wd."genimage.py \"".$_FILES['image']['tmp_name']."\" \"".$name."\" \"".$title."\" ".$filearg);
     chdir($wd);
     $fi = finfo_open(FILEINFO_MIME_TYPE);
     $mime = finfo_file($fi,"/tmp/".$outfilename);
