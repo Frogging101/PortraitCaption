@@ -1,0 +1,11 @@
+This software is distributed under the GPLv3 license. Please see COPYING.txt for more information.
+
+Documentation: https://docs.google.com/document/d/1BNp0uTb-CLZir-9CsFyLCrG6Iv7mZ9Jkd8IihhbvPmY/edit
+
+Requirements:
+*ImageMagick with FreeType
+*Python 2.7 or later
+
+Included are genimage.py, web interface files, and 4 sample images with different input sizes and text lengths.
+
+The script can be called directly from the command line, or through the web interface. To set up the web interface, simply drop all of the files in the "src" directory into the root of your web server. PHP is required.
